@@ -1,10 +1,10 @@
 <div id="main">
   <div>
-    <h1>Information</h1>
-    <div>
-      {{name}}
-      has ID
-      {{id}}.
-    </div>
+    <h1>List of all persons</h1>
+    {{#each listHumans}}
+      <div>
+        - {{id}}: <a href="/humans/{{id}}">{{name}}</a>
+      </div>
+    {{/each}}
   </div>
 </div>
