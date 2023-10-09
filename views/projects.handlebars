@@ -1,0 +1,34 @@
+<h1>My Projects</h1>
+<hr>
+
+{{#if isAdmin}}
+    <div>
+        <button><a href="/projects/new">New project</a></button>
+    </div>
+{{/if}}
+
+{{#if dbError}}
+    <div>
+        Sorry, there was a problem with the database:
+        <br />
+        {{theError}}
+    </div>
+{{else}}
+    {{#each projects}}
+        <div class="project-container">
+            <div class="project-info">
+                <h3>{{pname}}</h3>
+                <div>{{pyear}} - {{ptype}}</div>
+            </div>
+            <div class="project-image">
+                <img src="{{pimgURL}}" alt="{{pimgURL}}" />
+            </div>
+            {{#if ../isAdmin}}
+                <div class="project-actions">
+                    <button><a href="/projects/update/{{pid}}">Modify</a></button>
+                    <button><a href="/projects/delete/{{pid}}">Delete</a></button>
+                </div>
+            {{/if}}
+        </div>
+    {{/each}}
+{{/if}}

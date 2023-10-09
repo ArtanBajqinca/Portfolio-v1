@@ -1,0 +1,36 @@
+<div id='main'>
+    <section class='centered-container' id='login-form'>
+        <h1 class='lora'>Login</h1>
+
+        <img class='login-icon' src='/img/loginIcon.svg' alt='Login Icon' />
+
+        <form action='/login' method='post' class='login'>
+            <div class='input-group'>
+                <input
+                    type='text'
+                    name='un'
+                    id='un'
+                    required='required'
+                    placeholder='Username'
+                />
+            </div>
+
+            <div class='input-group'>
+                <input
+                    type='password'
+                    name='pw'
+                    id='pw'
+                    required='required'
+                    placeholder='Password'
+                />
+            </div>
+
+            <input
+                id='login-button-text'
+                class='login-button'
+                type='submit'
+                value='Login'
+            />
+        </form>
+    </section>
+</div>

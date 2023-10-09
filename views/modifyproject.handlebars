@@ -1,0 +1,45 @@
+<div class='new-edit-project'>
+    <h1>Modify Project</h1>
+    <div>
+        {{#if isLoggedIn}}
+        {{#if isAdmin}}
+        <form action="/projects/update/{{project.pid}}" method="post">
+        <fieldset>
+            <div>
+                <label for="projname">Project name: </label>
+                <input type="text" name="projname" id="projname" value="{{project.name}}" required="required">
+            </div>
+            <div>
+                <label for="projyear">Project year: </label>
+                <input type="number" name="projyear" id="projyear" placeholder="2023" value="{{project.pyear}}" required="required">
+            </div>
+            <div>
+                <label for="projdesc">Description: </label>
+                <textarea name="projdesc" id="projdesc" placeholder="Description" cols="30" rows="10" required="required">{{project.pdesc}}</textarea>
+            </div>
+            <div>
+                <label for="projtype">Project type: </label>
+                <select name="projtype" id="projtype" required="required">
+                    <option value="Research"{{#if (theTypeR project.ptype)}} selected="selected"{{/if}}>Research</option>
+                    <option value="Teaching"{{#if (theTypeT project.ptype)}} selected="selected"{{/if}}>Teaching</option>
+                    <option value="Other"{{#if (theTypeO project.ptype)}} selected="selected"{{/if}}>Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="projing">Project image URL: </label>
+                <input type="text" name="projimg" id="projimg" placeholder="/img/" value="{{project.pimgURL}}" required="required">
+            </div>
+        </fieldset>
+        <input type="submit" value="Add project">
+        </form>
+        {{else}}
+        <p>Sorry, you must be an admin to add a new project!</p>
+        {{/if}}
+        {{else}}
+        <p>
+            Sorry, you must be logged in to add a new project! <br>
+            Please go to the <a href="/login">login</a> page.
+        </p>
+        {{/if}}
+    </div>
+</div>

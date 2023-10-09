@@ -1,0 +1,70 @@
+<div class='new-edit-project'>
+    <h1>New project</h1>
+    <div>
+        {{#if isLoggedIn}}
+            {{#if isAdmin}}
+                <form action='/projects/new' method='post'>
+                    <fieldset>
+                        <label for='projname'>Project name: </label>
+                        <input
+                            type='text'
+                            name='projname'
+                            id='projname'
+                            required='required'
+                        />
+                        <br />
+                        <label for='projyear'>Project year: </label>
+                        <input
+                            type='number'
+                            name='projyear'
+                            id='projyear'
+                            placeholder='2023'
+                            required='required'
+                        />
+                        <br />
+                        <textarea
+                            name='projdesc'
+                            id='projdesc'
+                            placeholder='Description'
+                            cols='30'
+                            rows='10'
+                            required='required'
+                        ></textarea>
+                        <br />
+                        <label for='projtype'>Project type: </label>
+                        <select
+                            name='projtype'
+                            id='projtype'
+                            required='required'
+                        >
+                            <option value='Research'>Research</option>
+                            <option value='Education'>Education</option>
+                            <option value='Other'>Other</option>
+                        </select>
+                        <br />
+                        <label for='projimg'>Project image URL: </label>
+                        <input
+                            type='text'
+                            name='projimg'
+                            id='projimg'
+                            placeholder='/img/'
+                            required='required'
+                        />
+                        <br />
+                    </fieldset>
+                    <input type='submit' value='Add project' />
+                </form>
+            {{else}}
+                <p>Must be administrator to add a new project!</p>
+            {{/if}}
+        {{else}}
+            <p>
+                Must be logged in to add a new project!
+                <br />
+                Please go to the
+                <a href='/login'>login</a>
+                page.
+            </p>
+        {{/if}}
+    </div>
+</div>

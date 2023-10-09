@@ -1,8 +1,33 @@
-<header id="menu">
-  <div>
-    <ul>
-      <li><a href="/"> Home </a></li>
-      <li><a href="/humans"> Humans </a></li>
-    </ul>
-  </div>
+<link rel='stylesheet' href='/css/fonts.css' />
+
+<header>
+    <nav>
+        <div class='navbar' id='top-menu'>
+            <section class='navbar-section'>
+                <a href='/' class='logo'>
+                    <img src='/img/Logo.svg' alt='Logo' />
+                </a>
+                <div class='nav-links'>
+                    <a href='/projects' class='btn btn-link'>&ltProjects&gt</a>
+                    <a href='/about' class='btn btn-link'>&ltAbout&gt</a>
+                    <a href='/contact' class='btn btn-link'>&ltContact&gt</a>
+                    {{#if isLoggedIn}}
+                        <div class='user-greetings'>
+                            <div>
+                                Hi,
+                                {{name}}!
+                            </div>
+                            <a
+                                href='/logout'
+                                class='btn btn-link'
+                            >&ltLogout&gt</a>
+                        </div>
+                    {{else}}
+                        <a href='/login' class='btn btn-link'>&ltLogin&gt</a>
+                    {{/if}}
+                </div>
+
+            </section>
+        </div>
+    </nav>
 </header>
