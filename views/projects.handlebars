@@ -1,5 +1,4 @@
-<h1>My Projects</h1>
-<hr>
+<div class='project-me-center-container'>
 
 {{#if isAdmin}}
     <div>
@@ -8,7 +7,7 @@
 {{/if}}
 
 {{#if dbError}}
-    <div>
+    <div class="error">
         Sorry, there was a problem with the database:
         <br />
         {{theError}}
@@ -17,8 +16,8 @@
     {{#each projects}}
         <div class="project-container">
             <div class="project-info">
-                <h3>{{pname}}</h3>
-                <div>{{pyear}} - {{ptype}}</div>
+                <div class="p-name">{{pname}}</div>
+                <div class="p-year">{{pyear}} - {{ptype}}</div>
             </div>
             <div class="project-image">
                 <img src="{{pimgURL}}" alt="{{pimgURL}}" />
@@ -32,3 +31,12 @@
         </div>
     {{/each}}
 {{/if}}
+
+</div>
+<div class='project-me-title lora'>Projects</div>
+
+<div class='project-me-graphic'><img
+        src='/img/project-me-graphic.svg'
+        alt='background graphic'
+    /></div>
+

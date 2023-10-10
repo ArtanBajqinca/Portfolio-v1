@@ -150,6 +150,12 @@ input[type='submit'] {
     justify-content: center;
 }
 
+/* Project page styling */
+
+.project-image img {
+    width: 300px;
+}
+
 /* New project styling */
 
 .new-edit-project {
@@ -188,7 +194,7 @@ input[type='submit'] {
     margin-top: 10px;
 }
 
-/* About me page styling */
+/* landing page styling */
 
 .AboutHero {
     position: relative; /* Establish a positioning context */
@@ -256,13 +262,13 @@ input[type='submit'] {
     background: #373737;
     width: 8.75rem;
     height: 1.175rem;
-    left: 328px;
-    top: 220px;
+    left: 84px;
+    top: 91px;
     flex-shrink: 0;
     z-index: -1;
 }
 
-/* About me Featured proj */
+/* Landing page Featured proj */
 
 .Featured-proj {
     position: absolute;
@@ -276,7 +282,7 @@ input[type='submit'] {
     color: #fff;
     font-family: Lora;
     font-size: 2.87rem;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 2.96rem;
     letter-spacing: 0.086rem;
 }
@@ -300,4 +306,243 @@ input[type='submit'] {
 .proj-box img {
     width: 240px;
     margin: 20px;
+}
+
+/* About me page */
+
+.about-me-graphic img {
+    position: absolute;
+    height: 1300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 900px;
+    z-index: -1;
+}
+
+.about-me-center-container {
+    color: white;
+    width: 55.875rem;
+    height: 99rem;
+    background-color: #373737;
+    position: absolute;
+    top: 1200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-me-title {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.about-me-short-desc {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 250px;
+    width: 31.8125rem;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1rem;
+    line-height: 1.35rem;
+    letter-spacing: 0.03rem;
+}
+
+.Edu-title-left {
+    position: absolute;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    top: 480px;
+    width: 13.3125rem;
+    height: 1.1875rem;
+    color: rgba(255, 255, 255, 0);
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1.625rem;
+    font-weight: 700;
+    letter-spacing: 0.27625rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.Edu-title-right {
+    position: absolute;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    top: 480px;
+    width: 13.3125rem;
+    height: 1.1875rem;
+    color: rgba(255, 255, 255, 0);
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1.625rem;
+    font-weight: 700;
+    letter-spacing: 0.27625rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+/* about me squares */
+.container-shared {
+    width: 12.3125rem;
+    height: 11.5rem;
+    border: 4px solid white;
+    border-radius: 25px;
+    margin: 0 25px; /* Adds some space between the squares */
+}
+
+/* Common styles for titles */
+.title-shared {
+    color: white;
+    text-align: center;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.0375rem;
+    margin-top: 30px;
+}
+
+/* Common styles for descriptions */
+.desc-shared {
+    margin-top: 60px;
+    color: #d9d9d9;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.square-left-desc {
+    left: 23.5%;
+}
+
+.square-middle-desc {
+    left: 49%;
+}
+
+.square-right-desc {
+    left: 76.5%;
+    text-align: center;
+}
+
+.square-left-desc ul,
+.square-middle-desc ul li {
+    margin: 0;
+}
+
+.about-me-squares {
+    display: flex; /* Flexbox to align the squares horizontally */
+    justify-content: center; /* Center the squares */
+    width: 100%; /* Take up the full width of the parent */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Projects page styling */
+
+.project-me-center-container {
+    color: white;
+    width: 55.875rem;
+    height: 99rem;
+    background-color: #373737;
+    position: absolute;
+    top: 1200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.project-me-title {
+    position: absolute;
+    font-weight: bold;
+    top: 203px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.project-me-graphic img {
+    position: absolute;
+    height: 1600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 900px;
+    z-index: -1;
+}
+
+/* contact page styling */
+
+.contact-centered-container::before {
+    content: '';
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 370px;
+    background-color: #373737;
+    z-index: -1;
+}
+
+.contact-centered-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 0 0 0;
+}
+
+.num-mail {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.num,
+.mail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkedin-git {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.linkedin,
+.git {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-title {
+    color: #fff;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-text {
+    color: #fff;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.03375rem;
+}
+
+.linkedin-username,
+.git-username {
+    color: white !important;
+    text-decoration: underline;
 }
