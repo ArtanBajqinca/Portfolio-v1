@@ -20,5 +20,8 @@
     "express-handlebars": "^7.1.2",
     "express-session": "^1.17.3",
     "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
   }
 }

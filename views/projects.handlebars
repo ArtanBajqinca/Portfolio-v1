@@ -1,42 +1,61 @@
-<div class='project-me-center-container'>
-
-{{#if isAdmin}}
-    <div>
-        <button><a href="/projects/new">New project</a></button>
-    </div>
-{{/if}}
-
-{{#if dbError}}
-    <div class="error">
-        Sorry, there was a problem with the database:
-        <br />
-        {{theError}}
-    </div>
-{{else}}
-    {{#each projects}}
-        <div class="project-container">
-            <div class="project-info">
-                <div class="p-name">{{pname}}</div>
-                <div class="p-year">{{pyear}} - {{ptype}}</div>
+<div class='about-me-center-container'>
+    <div class='about-me-bg'>
+        <div class='about-me-title lora'>Projects</div>
+        {{#if isAdmin}}
+            <div>
+                <a class='btn' href='/projects/new'>New project</a>
             </div>
-            <div class="project-image">
-                <img src="{{pimgURL}}" alt="{{pimgURL}}" />
+        {{/if}}
+
+        {{#if dbError}}
+            <div class='error'>
+                Sorry, there was a problem with the database:
+                <br />
+                {{theError}}
             </div>
-            {{#if ../isAdmin}}
-                <div class="project-actions">
-                    <button><a href="/projects/update/{{pid}}">Modify</a></button>
-                    <button><a href="/projects/delete/{{pid}}">Delete</a></button>
+        {{else}}
+            {{#each projects}}
+                <div class='project-container'>
+                    {{#if (eq ptype 'graphic-design')}}
+                        <div class='g-section'>
+                            <div class='g-container'>
+                                {{!-- <div class='g-name'>{{pname}}</div>
+                                <div class='g-year'>{{pyear}}</div> --}}
+                                <div class='g-image'>
+                                    <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+
+                    {{#if (eq ptype 'programming')}}
+                        <div class='p-section'>
+                            <div class='p-container'>
+                                <div class='prog-title'>PROGRAMMING PROJECTS</div>
+                                {{!-- <div class='p-name'>{{pname}}</div>
+                                <div class='p-year'>{{pyear}}</div> --}}
+                                <div class='p-image'>
+                                    <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
+                                </div>
+                            </div>
+                        </div>
+
+                    {{/if}}
+
+                    {{#if isAdmin}}
+                        <div class='project-actions'>
+                            <a class='btn' href='/projects/update/{{pid}}'>Modify</a>
+                            <a class='btn' href='/projects/delete/{{pid}}'>Delete</a>
+                        </div>
+                    {{/if}}
+
                 </div>
-            {{/if}}
-        </div>
-    {{/each}}
-{{/if}}
+            {{/each}}
+        {{/if}}
+    </div>
 
 </div>
-<div class='project-me-title lora'>Projects</div>
-
-<div class='project-me-graphic'><img
-        src='/img/project-me-graphic.svg'
-        alt='background graphic'
-    /></div>
-
+<div class='project-me-graphic'>
+    <img src='/img/project-me-graphic.svg' alt='Background graphic for project section' />
+</div>
+<div class='gd-title'>GRAPHIC DESIGN PROJECTS</div>

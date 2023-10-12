@@ -6,21 +6,10 @@
                 <form action='/projects/new' method='post'>
                     <fieldset>
                         <label for='projname'>Project name: </label>
-                        <input
-                            type='text'
-                            name='projname'
-                            id='projname'
-                            required='required'
-                        />
+                        <input type='text' name='projname' id='projname' required='required' />
                         <br />
                         <label for='projyear'>Project year: </label>
-                        <input
-                            type='number'
-                            name='projyear'
-                            id='projyear'
-                            placeholder='2023'
-                            required='required'
-                        />
+                        <input type='number' name='projyear' id='projyear' placeholder='2023' required='required' />
                         <br />
                         <textarea
                             name='projdesc'
@@ -32,24 +21,14 @@
                         ></textarea>
                         <br />
                         <label for='projtype'>Project type: </label>
-                        <select
-                            name='projtype'
-                            id='projtype'
-                            required='required'
-                        >
+                        <select name='projtype' id='projtype' required='required'>
                             <option value='Research'>Research</option>
                             <option value='Education'>Education</option>
                             <option value='Other'>Other</option>
                         </select>
                         <br />
                         <label for='projimg'>Project image URL: </label>
-                        <input
-                            type='text'
-                            name='projimg'
-                            id='projimg'
-                            placeholder='/img/'
-                            required='required'
-                        />
+                        <input type='text' name='projimg' id='projimg' placeholder='/img/' required='required' />
                         <br />
                     </fieldset>
                     <input type='submit' value='Add project' />

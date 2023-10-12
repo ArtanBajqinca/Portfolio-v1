@@ -3,6 +3,7 @@
 <header>
     <nav>
         <div class='navbar' id='top-menu'>
+
             <section class='navbar-section'>
                 <a href='/' class='logo'>
                     <img src='/img/Logo.svg' alt='Logo' />
@@ -13,17 +14,14 @@
                     <a href='/contact' class='btn btn-link'>&ltContact&gt</a>
                     {{#if isLoggedIn}}
                         <div class='user-greetings'>
-                            <div>
+                            <div class='greeting'>
                                 Hi,
                                 {{name}}!
                             </div>
-                            <a
-                                href='/logout'
-                                class='btn btn-link'
-                            >&ltLogout&gt</a>
+                            <a href='/logout' class='btn btn-link logout log'>&ltLogout&gt</a>
                         </div>
                     {{else}}
-                        <a href='/login' class='btn btn-link'>&ltLogin&gt</a>
+                        <a href='/login' class='btn btn-link log'>&ltLogin&gt</a>
                     {{/if}}
                 </div>
 

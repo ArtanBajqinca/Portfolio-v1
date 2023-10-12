@@ -1,6 +1,15 @@
 {
-    "trailingComma": "es5",
+    "singleQuote": true,
     "tabWidth": 4,
     "semi": false,
-    "singleQuote": true
+    "printWidth": 120,
+    "trailingComma": "es5",
+    "overrides": [
+        {
+            "files": "*.hbs",
+            "options": {
+                "parser": "handlebars"
+            }
+        }
+    ]
 }

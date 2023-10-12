@@ -1,0 +1,169 @@
+/* Landing page */
+
+@media (max-width: 1100px) {
+    .hero-section {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .hero-group {
+        flex-direction: column-reverse;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-right: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-text-name {
+        font-size: 2rem;
+    }
+
+    .hero-text-title {
+        font-size: 1rem;
+    }
+
+    .hero-text-desc {
+        font-size: 0.8rem;
+        margin-top: 20px;
+    }
+
+    .hero-text-btn {
+        margin-top: 20px;
+        align-self: center;
+    }
+
+    .rectangle {
+        width: 6.5rem;
+        height: 0.8rem;
+        margin-left: -20px;
+        margin-top: 2px;
+    }
+    #homeGraphic {
+        max-width: 300px;
+        margin: 0 20px 60px 0;
+    }
+
+    .Featured-proj {
+        margin: 100px 0 75px 0;
+    }
+
+    .proj-box {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .Featured-proj-title {
+        font-size: 1.6rem;
+    }
+
+    /* Navbar */
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logo {
+    }
+
+    .logo img {
+        width: 220px;
+        max-width: 300px !important;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        margin: 25px 0 10px 0px;
+        width: 70%;
+        padding: 0 !important;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btn-link,
+    .user-greetings {
+        display: flex;
+        width: 100px;
+        margin: 0 !important;
+        border: 0 !important;
+        background-color: #373737 !important;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+
+    .user-greetings {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .user-greetings .greeting,
+    .user-greetings .logout {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* about me */
+
+    .about-me-bg {
+        margin-top: 80px !important;
+    }
+
+    .about-me-graphic img {
+        position: fixed !important;
+        height: 800px !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 400px !important;
+        z-index: -1;
+    }
+
+    .about-me-center-container {
+        margin-top: 0px !important;
+    }
+
+    .container-shared {
+        scale: 80%;
+    }
+
+    .about-me-squares-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px !important;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .about-me-short-desc {
+        display: flex;
+        width: 80% !important;
+        font-family: 'Avenir Next', sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.35rem;
+        letter-spacing: 0.03rem;
+        margin-top: 45px;
+    }
+
+    /* login */
+
+    .centered-container {
+        margin: 30px 0 !important;
+    }
+
+    .lora {
+        font-size: 2.2rem !important;
+        padding: 14px !important;
+    }
+}
