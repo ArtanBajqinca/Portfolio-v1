@@ -1,3 +1,4 @@
+// Module Imports
 const express = require('express')
 const { engine } = require('express-handlebars')
 const bodyParser = require('body-parser')
@@ -5,24 +6,23 @@ const session = require('express-session')
 const connectSqlite3 = require('connect-sqlite3')
 const sqlite3 = require('sqlite3')
 const Handlebars = require('handlebars')
+const bcrypt = require('bcryptjs')
 
-Handlebars.registerHelper('eq', function (a, b) {
-    return a === b
-})
-
-// Configuration
+// Global Constants & Variables
 const port = 80
 const app = express()
 const db = new sqlite3.Database('database-ab.db')
+const saltRounds = 12
+const storedHashedPassword = '$2a$12$0twOEMc0xE0z/ZYIJXj0QuMbeYw4D1h5cxPeRBd13bTqcclwGEgEq'
 
 // Middleware Configuration
+
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
 app.set('views', './views')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
 const SQLiteStore = connectSqlite3(session)
 app.use(
     session({
@@ -33,10 +33,13 @@ app.use(
     })
 )
 
-app.listen(8080, '0.0.0.0')
+// Utility Functions
+Handlebars.registerHelper('eq', function (a, b) {
+    return a === b
+})
 
-// Routes
 app.get('/', (req, res) => {
+    console.log('SESSION: ', req.session)
     const model = {
         isLoggedIn: req.session.isLoggedIn,
         name: req.session.name,
@@ -167,7 +170,6 @@ app.post('/projects/update/:id', (req, res) => {
         req.body.projimg,
         id,
     ]
-
     if (req.session.isLoggedIn && req.session.isAdmin) {
         db.run(
             'UPDATE projects SET pname=?, pyear=?, pdesc=?, ptype=?, pimgURL=? WHERE pid=?',
@@ -187,9 +189,9 @@ app.post('/projects/update/:id', (req, res) => {
     }
 })
 
-app.post('/projects/delete/:id', (req, res) => {
+app.get('/projects/delete/:id', (req, res) => {
     const id = req.params.id
-    if (req.session.isLoggedIn == true && req.session.isAdmin == true) {
+    if (req.session.isLoggedIn && req.session.isAdmin) {
         db.run('DELETE FROM projects WHERE pid=?', [id], (error, theProjects) => {
             if (error) {
                 const model = {
@@ -220,12 +222,26 @@ app.get('/login', (req, res) => {
 
 app.post('/login', (req, res) => {
     const { un, pw } = req.body
+    const storedHashedPassword = '$2a$12$0twOEMc0xE0z/ZYIJXj0QuMbeYw4D1h5cxPeRBd13bTqcclwGEgEq'
 
-    if (un === 'baar21pl' && pw === 'pass') {
-        req.session.isAdmin = true
-        req.session.isLoggedIn = true
-        req.session.name = 'baar21pl'
-        res.redirect('/')
+    if (un === 'baar21pl') {
+        bcrypt.compare(pw, storedHashedPassword, (err, result) => {
+            if (err) {
+                console.error('Error during password comparison:', err)
+                return res.redirect('login')
+            }
+            if (result) {
+                req.session.isAdmin = true
+                req.session.isLoggedIn = true
+                req.session.name = 'baar21pl'
+                return res.redirect('/')
+            } else {
+                req.session.isAdmin = false
+                req.session.isLoggedIn = false
+                req.session.name = ''
+                return res.redirect('login')
+            }
+        })
     } else {
         req.session.isAdmin = false
         req.session.isLoggedIn = false
@@ -243,14 +259,12 @@ app.get('/logout', (req, res) => {
     })
 })
 
-// Start Server
+// Server Initialization
 app.listen(port, () => {
     console.log(`Server running and listening on port ${port}`)
 })
 
-///////////////////
-// D A T B A S E //
-///////////////////
+// D A T B A S E
 
 // Create 'projects' table
 db.run(
@@ -272,7 +286,7 @@ db.run(
                 },
                 {
                     id: 2,
-                    name: 'Database for a fictional sneakerBrand business',
+                    name: 'Database for a sneakerBrand business',
                     year: 2023,
                     desc: 'Description',
                     type: 'programming',

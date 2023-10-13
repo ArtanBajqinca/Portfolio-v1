@@ -1,0 +1,68 @@
+.login-background-rectangle {
+    width: 100%;
+    background-color: #373737;
+    margin-top: 150px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-container {
+    margin-bottom: 40px;
+}
+
+.lora {
+    color: #fff;
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.10313rem;
+    margin-top: -53px;
+}
+
+.login-icon {
+    margin: 40px 0 20px 0;
+}
+
+.input-group {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+input[type='text'],
+input[type='password'] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #e0e0e0;
+    outline: none;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.login-button {
+    width: 4.8125rem;
+    height: 1.6875rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #373737;
+    font-family: 'OCRAEXT', sans-serif;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

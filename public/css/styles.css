@@ -1,4 +1,7 @@
 @import url('landing-page.css');
+@import url('project-page.css');
+@import url('contact-page.css');
+@import url('login-page.css');
 @import url('mobile-responsive.css');
 
 body {
@@ -61,7 +64,17 @@ body {
 }
 
 .logout {
-    order: 1;
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Animated underline effect for navbar */
@@ -93,117 +106,6 @@ body {
     right: 25%;
 }
 
-/* Login form styling */
-
-input[type='text'],
-input[type='password'] {
-    width: 300px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #444;
-    border-radius: 5px;
-    background-color: #333;
-    color: #e0e0e0;
-    outline: none;
-}
-
-input[type='submit'] {
-    width: 300px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: gray;
-    color: #fff;
-}
-
-.centered-container::before {
-    content: '';
-    position: absolute;
-    top: 59%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 370px;
-    background-color: #373737;
-    z-index: -1;
-}
-
-.centered-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 80px 0;
-}
-
-.lora {
-    color: #fff;
-    font-family: 'Lora';
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.10313rem;
-}
-
-.login-icon {
-    margin: 10px 0 20px 0;
-}
-
-#login-button-text,
-.login-button {
-    font-family: 'OCRAEXT', sans-serif;
-    background-color: white;
-    color: #373737;
-    width: 4.8125rem;
-    height: 1.6875rem;
-    line-height: 1;
-    padding: 10px 15px;
-    margin-top: 10px;
-}
-
-.login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-/* New project styling */
-
-.new-edit-project {
-    color: white;
-    padding: 20px;
-    background-color: #444;
-    position: absolute;
-    top: 550px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.new-edit-project h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.new-edit-project form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.new-edit-project label,
-.new-edit-project input,
-.new-edit-project textarea,
-.new-edit-project select {
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.new-edit-project input[type='submit'] {
-    margin-top: 10px;
-}
-
 /* About me page */
 
 .about-me-graphic img {
@@ -225,14 +127,14 @@ input[type='submit'] {
 .about-me-bg {
     display: block;
     background-color: #373737;
-    width: 80%;
-    height: 2000px;
+    width: 1200px;
     margin-top: 15 0px;
 }
 
 .about-me-title {
     text-align: center;
-    margin-top: -53px;
+    margin-top: -39px;
+    padding: 0 !important;
 }
 
 .about-me-desc-container {
@@ -246,7 +148,7 @@ input[type='submit'] {
 
 .about-me-short-desc {
     display: flex;
-    width: 40%;
+    width: 800px;
     font-family: 'Avenir Next', sans-serif;
     font-size: 0.8rem;
     line-height: 1.35rem;
@@ -311,7 +213,6 @@ input[type='submit'] {
     border-radius: 25px;
 }
 
-/* Common styles for titles */
 .title-shared {
     text-align: center;
     color: white;
@@ -322,7 +223,6 @@ input[type='submit'] {
     margin-top: 30px;
 }
 
-/* Common styles for descriptions */
 .desc-shared {
     margin-top: 20px;
     color: #d9d9d9;
@@ -346,215 +246,40 @@ input[type='submit'] {
     margin: 0;
 }
 
-/* Projects page styling */
+/* New project styling */
 
-.project-me-center-container {
+.new-edit-project {
     color: white;
-    width: 55.875rem;
-    height: 99rem;
-    background-color: #373737;
+    padding: 20px;
+    background-color: #444;
     position: absolute;
+    top: 550px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    top: 1200px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.project-me-title {
-    position: absolute;
-    font-weight: bold;
-    top: 203px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.project-me-graphic img {
-    position: absolute;
-    height: 1600px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 900px;
-    z-index: -1;
-}
-
-.prog-title {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 380px;
-    color: rgba(255, 255, 255, 0);
-    font-family: 'Avenir Next', sans-serif;
-    font-weight: 700;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: white;
-    color: rgba(255, 255, 255, 0);
-    font-family: Avenir Next;
-    font-size: 1.8125rem;
-    letter-spacing: 0.30813rem;
-    white-space: nowrap;
-}
-
-.gd-title {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 1080px;
-    color: rgba(255, 255, 255, 0);
-    font-family: 'Avenir Next', sans-serif;
-    font-weight: 700;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: white;
-    color: rgba(255, 255, 255, 0);
-    font-family: Avenir Next;
-    font-size: 1.8125rem;
-    letter-spacing: 0.30813rem;
-    white-space: nowrap;
-}
-
-.project-me-center-container {
-    color: white;
-    width: 55.875rem;
-    height: auto;
-    background-color: #373737;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    left: 50%;
-    column-gap: 50px;
-}
-
-.project-container {
-    height: auto;
-    width: auto;
-}
-
-.p-container {
-}
-
-.g-section {
-}
-
-.p-image img,
-.g-image img {
-    max-width: 400px;
-}
-
-.project-me-title {
-    position: absolute;
-    font-weight: bold;
-    top: 203px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.project-me-graphic img {
-    position: absolute;
-    height: 1600px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 900px;
-    z-index: -1;
-}
-
-.prog-title,
-.gd-title {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0);
-    font-family: 'Avenir Next', sans-serif;
-    font-weight: 700;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: white;
-    color: rgba(255, 255, 255, 0);
-    font-size: 1.8125rem;
-    letter-spacing: 0.30813rem;
-    white-space: nowrap;
-}
-
-.prog-title {
-    top: 380px;
-}
-
-.gd-title {
-    top: 1080px;
-}
-
-/* contact page styling */
-
-.contact-centered-container::before {
-    content: '';
-    position: absolute;
-    top: 230px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 370px;
-    background-color: #373737;
-    z-index: -1;
-}
-
-.contact-centered-container {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    margin: 80px 0 0 0;
-}
-
-.contact-container {
-}
-
-.num-mail {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
     align-items: center;
 }
 
-.num,
-.mail {
+.new-edit-project h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.new-edit-project form {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    width: 100%;
 }
 
-.linkedin-git {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+.new-edit-project label,
+.new-edit-project input,
+.new-edit-project textarea,
+.new-edit-project select {
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-.linkedin,
-.git {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.contact-title {
-    color: #fff;
-    font-family: 'Avenir Next', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 0.2rem;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.contact-text {
-    color: #fff;
-    font-family: 'Avenir Next', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 400;
-    letter-spacing: 0.03375rem;
-}
-
-.linkedin-username,
-.git-username {
-    color: white !important;
-    text-decoration: underline;
+.new-edit-project input[type='submit'] {
+    margin-top: 10px;
 }

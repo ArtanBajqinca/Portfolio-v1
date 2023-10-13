@@ -1,0 +1,57 @@
+.contact-background-rectangle {
+    width: 100%;
+    background-color: #373737;
+    margin-top: 150px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.num-mail,
+.linkedin-git {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.num,
+.mail,
+.linkedin,
+.git {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-sub-title {
+    color: #fff;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-title {
+    margin-top: -53px;
+}
+
+.contact-text {
+    color: #fff;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.03375rem;
+}
+
+.linkedin-username,
+.git-username {
+    color: white !important;
+    text-decoration: underline;
+}

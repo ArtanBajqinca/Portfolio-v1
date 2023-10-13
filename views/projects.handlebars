@@ -14,42 +14,44 @@
                 {{theError}}
             </div>
         {{else}}
+            <div class='programming-title'>PROGRAMMING PROJECTS</div>
+
             {{#each projects}}
-                <div class='project-container'>
-                    {{#if (eq ptype 'graphic-design')}}
-                        <div class='g-section'>
-                            <div class='g-container'>
-                                {{!-- <div class='g-name'>{{pname}}</div>
-                                <div class='g-year'>{{pyear}}</div> --}}
-                                <div class='g-image'>
-                                    <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
-                                </div>
+
+                {{#if (eq ptype 'programming')}}
+                    <div class='project-programming-container'>
+                        <div class='project-programming-section'>
+                            <div class='project-programming-name'>{{pname}}</div>
+                            {{!-- <div class='p-year'>{{pyear}}</div> --}}
+                            <div class='project-programming-image'>
+                                <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
                             </div>
                         </div>
-                    {{/if}}
+                    </div>
+                {{/if}}
+            {{/each}}
 
-                    {{#if (eq ptype 'programming')}}
-                        <div class='p-section'>
-                            <div class='p-container'>
-                                <div class='prog-title'>PROGRAMMING PROJECTS</div>
-                                {{!-- <div class='p-name'>{{pname}}</div>
-                                <div class='p-year'>{{pyear}}</div> --}}
-                                <div class='p-image'>
-                                    <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
-                                </div>
+            <div class='graphic-design-title'>GRAPHIC DESIGN PROJECTS</div>
+            {{#each projects}}
+                {{#if (eq ptype 'graphic-design')}}
+                    <div class='project-graphic-design-container'>
+                        <div class='project-graphic-design-section'>
+                            {{!-- <div class='g-name'>{{pname}}</div> --}}
+                            {{!-- <div class='g-year'>{{pyear}}</div> --}}
+                            <div class='project-graphic-design-image'>
+                                <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
                             </div>
                         </div>
+                    </div>
+                {{/if}}
 
-                    {{/if}}
+                {{#if ../isAdmin}}
+                    <div class='project-actions'>
+                        <a class='btn' href='/projects/update/{{pid}}'>Modify</a>
+                        <a class='btn' href='/projects/delete/{{pid}}'>Delete</a>
+                    </div>
+                {{/if}}
 
-                    {{#if isAdmin}}
-                        <div class='project-actions'>
-                            <a class='btn' href='/projects/update/{{pid}}'>Modify</a>
-                            <a class='btn' href='/projects/delete/{{pid}}'>Delete</a>
-                        </div>
-                    {{/if}}
-
-                </div>
             {{/each}}
         {{/if}}
     </div>
@@ -58,4 +60,3 @@
 <div class='project-me-graphic'>
     <img src='/img/project-me-graphic.svg' alt='Background graphic for project section' />
 </div>
-<div class='gd-title'>GRAPHIC DESIGN PROJECTS</div>

@@ -1,6 +1,6 @@
-/* Landing page */
-
 @media (max-width: 1100px) {
+    /* Landing */
+
     .hero-section {
         flex-direction: column;
         margin-top: 20px;
@@ -39,9 +39,9 @@
     }
 
     .rectangle {
-        width: 6.5rem;
+        width: 6.3rem;
         height: 0.8rem;
-        margin-left: -20px;
+        margin-left: -19px;
         margin-top: 2px;
     }
     #homeGraphic {
@@ -91,10 +91,9 @@
         gap: 20px;
     }
 
-    .btn-link,
-    .user-greetings {
-        display: flex;
-        width: 100px;
+    .btn-link {
+        display: flex !important;
+        width: 100px !important;
         margin: 0 !important;
         border: 0 !important;
         background-color: #373737 !important;
@@ -103,34 +102,39 @@
     }
 
     .user-greetings {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        display: block !important;
+        text-align: center;
+        width: 100px !important;
     }
 
-    .user-greetings .greeting,
-    .user-greetings .logout {
-        width: 100%;
-        margin-left: 0;
+    .greeting {
+        margin: 0 !important;
+        font-size: 0.6rem;
+    }
+
+    .logout {
+        order: 1 !important;
+    }
+
+    .hamburger {
+        display: block;
     }
 
     /* about me */
 
-    .about-me-bg {
+    .bg {
         margin-top: 80px !important;
     }
 
     .about-me-graphic img {
         position: fixed !important;
         height: 800px !important;
-        left: 50%;
         transform: translate(-50%, -50%);
         top: 400px !important;
-        z-index: -1;
     }
 
     .about-me-center-container {
-        margin-top: 0px !important;
+        margin-top: 70px !important;
     }
 
     .container-shared {
@@ -138,32 +142,70 @@
     }
 
     .about-me-squares-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 10px !important;
-        align-items: center;
-        margin-top: 50px;
     }
 
     .about-me-short-desc {
-        display: flex;
         width: 80% !important;
-        font-family: 'Avenir Next', sans-serif;
-        font-size: 0.8rem;
-        line-height: 1.35rem;
-        letter-spacing: 0.03rem;
-        margin-top: 45px;
     }
 
     /* login */
 
-    .centered-container {
-        margin: 30px 0 !important;
+    .login-container {
+        margin-top: -100px !important;
     }
 
     .lora {
         font-size: 2.2rem !important;
         padding: 14px !important;
+    }
+
+    .login-icon {
+        margin: 20px 0 10px 0 !important;
+    }
+
+    /* projects */
+
+    .project-me-graphic img {
+        position: fixed !important;
+        height: 800px !important;
+        top: 400px !important;
+    }
+
+    .programming-title,
+    .graphic-design-title {
+        font-weight: 600 !important;
+        color: white !important;
+        font-size: 1.5125rem !important;
+    }
+
+    /* Contact */
+
+    .contact-background-rectangle {
+        margin-top: 70px !important;
+    }
+
+    .contact-container {
+        margin: 0 !important;
+    }
+
+    .linkedin-git {
+        flex-direction: column !important;
+        scale: 80%;
+    }
+
+    .num-mail {
+        flex-direction: column !important;
+        scale: 80%;
+    }
+
+    .contact-background-rectangle {
+        height: 400px !important;
+    }
+    .linkedin-git  {
+        margin-top: 0px;
+    }
+    .contact-sub-title {
+        margin: 20px 0 40px 0 !important;
     }
 }
