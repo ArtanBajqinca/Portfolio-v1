@@ -1,4 +1,6 @@
-<div class='about-me-graphic'><img src='/img/About-me-graphic.svg' alt='background graphic' /></div>
+<div class='about-me-graphic'>
+    <img src='/img/About-me-graphic.svg' alt='background graphic' />
+</div>
 
 <div class='about-me-center-container'>
     <div class='about-me-bg'>
@@ -8,20 +10,35 @@
                 Hi, I’m Artan Bajqinca, a software development student based in Jönköping, Sweden, currently in my
                 second year of bachelor’s study. Although my focus is on programming, I have a passion for graphic
                 design and enjoy bringing innovative and thoughtful projects to life that aim to make a positive impact.
-                <br />
-                <br />Outside of my academic pursuits, I’m passionate about fitness, running, and martial arts, striving
-                to maintain a balanced and healthy lifestyle. Whether through coding or design, I am driven to learn,
-                create, and contribute meaningfully to society.
-
+                <br /><br />Outside of my academic pursuits, I’m passionate about fitness, running, and martial arts,
+                striving to maintain a balanced and healthy lifestyle. Whether through coding or design, I am driven to
+                learn, create, and contribute meaningfully to society.
             </div>
         </div>
 
         <div class='about-me-container'>
             <div class='about-me-titles'>
-                <div class='Edu-title-left'>EDUCATION</div>
-                <div class='Edu-title-right'>EXPERIENCE</div>
+                <div class='education-left-container'>
+                    <div class='Edu-title-left'>EDUCATION</div>
+                    {{#each education}}
+                        <div class='education-container'>
+                            <div class='education-title'>{{ename}}</div>
+                            <div class='education-description'>{{edesc}}</div>
+                            <div class='education-date'>{{date}}</div>
+                        </div>
+                    {{/each}}
+                </div>
+                <div class='experience-right-container'>
+                    <div class='Edu-title-right'>EXPERIENCE</div>
+                    {{#each experience}}
+                        <div class='experience-container'>
+                            <div class='experience-title'>{{exname}}</div>
+                            <div class='experience-description'>{{exdesc}}</div>
+                            <div class='experience-date'>{{exdate}}</div>
+                        </div>
+                    {{/each}}
+                </div>
             </div>
-
         </div>
 
         <div class='about-me-squares'>
@@ -30,11 +47,9 @@
                     <div class='square-left-title title-shared'>Languages</div>
                     <div class='square-left-desc desc-shared'>
                         <ul>
-                            Swedish 5/5
-                            <br />
-                            English 4/5
-                            <br />
-                            Albanian 3/5
+                            <li>Swedish 5/5</li>
+                            <li>English 4/5</li>
+                            <li>Albanian 3/5</li>
                         </ul>
                     </div>
                 </div>
@@ -59,8 +74,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>

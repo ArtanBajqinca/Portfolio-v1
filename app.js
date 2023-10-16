@@ -49,12 +49,37 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    const model = {
+    let model = {
+        dbError: false,
+        theError: '',
+        education: [],
+        experience: [],
         isLoggedIn: req.session.isLoggedIn,
         name: req.session.name,
         isAdmin: req.session.isAdmin,
     }
-    res.render('about.handlebars', model)
+
+    // Get education data
+    db.all('SELECT * FROM education', (error, theEducation) => {
+        if (error) {
+            model.dbError = true
+            model.theError = error
+        } else {
+            model.education = theEducation
+        }
+
+        // Get experience data
+        db.all('SELECT * FROM experience', (error, theExperience) => {
+            if (error) {
+                model.dbError = true
+                model.theError = error
+            } else {
+                model.experience = theExperience
+            }
+
+            res.render('about.handlebars', model)
+        })
+    })
 })
 
 app.get('/contact', (req, res) => {
@@ -345,7 +370,12 @@ db.run(
 
 // Create 'education' table
 db.run(
-    'CREATE TABLE education (eid INTEGER PRIMARY KEY AUTOINCREMENT, ename TEXT NOT NULL, edesc TEXT NOT NULL, etype TEXT NOT NULL)',
+    `CREATE TABLE education (
+        eid INTEGER PRIMARY KEY AUTOINCREMENT, 
+        ename TEXT NOT NULL, 
+        edesc TEXT NOT NULL, 
+        date TEXT NOT NULL
+    )`,
     (error) => {
         if (error) {
             console.error('ERROR Creating Education Table: ', error)
@@ -355,35 +385,79 @@ db.run(
             const educationEntries = [
                 {
                     name: 'Bacheloring in Computer Engineer',
-                    type: 'Programming language',
-                    desc: "Since 2021, I've been studying Software Development and Mobile Platforms at Jönköping University, focusing on app and web systems with hands-on projects covering all stages of software development.",
+                    desc: "I've been studying Software Development and Mobile Platforms at Jönköping University, focusing on app and web systems with hands-on projects covering all stages of software development.",
+                    date: '2021 - Ongoing',
                 },
                 {
-                    name: 'Python',
-                    type: 'Programming language',
-                    desc: 'Programming with Python.',
+                    name: 'Basic Science year',
+                    desc: "I undertook the Basic Science Year at Jönköping's Technical College, strengthening my foundation in mathematics, physics, and chemistry, priming me for advanced engineering studies.",
+                    date: '2020 - 2021',
                 },
                 {
-                    name: 'Java',
-                    type: 'Programming language',
-                    desc: 'Programming with Java.',
-                },
-                {
-                    name: 'ImageJ',
-                    type: 'Framework',
-                    desc: 'Java Framework for Image Processing.',
+                    name: 'High School degree in carpentry',
+                    desc: 'With a background in traditional and modern carpentry, my degree underlines meticulous precision and excellence in all woodworking endeavors.',
+                    date: '2017 - 2019',
                 },
             ]
 
             educationEntries.forEach((entry) => {
                 db.run(
-                    'INSERT INTO Education (ename, edesc, etype) VALUES (?, ?, ?)',
-                    [entry.name, entry.desc, entry.type],
+                    'INSERT INTO Education (ename, edesc, date) VALUES (?, ?, ?)',
+                    [entry.name, entry.desc, entry.date],
                     (error) => {
                         if (error) {
                             console.error('ERROR Inserting into Education Table: ', error)
                         } else {
                             console.log(`Added '${entry.name}' to the Education table.`)
+                        }
+                    }
+                )
+            })
+        }
+    }
+)
+
+// Create 'experiene' table
+db.run(
+    `CREATE TABLE experience (
+        exid INTEGER PRIMARY KEY AUTOINCREMENT,
+        exname TEXT NOT NULL,
+        exdesc TEXT NOT NULL,
+        exdate TEXT NOT NULL
+    )`,
+    (error) => {
+        if (error) {
+            console.log('ERROR creating Experience Table ', error)
+        } else {
+            console.log('Experience table created successfully!')
+
+            const experienceEntires = [
+                {
+                    name: 'Course completed at University',
+                    desc: 'C++, Databases, Data Structures and Algorithms, Object Oriented  Programming and also math courses such as Discrete Mathematic, Linear Algebra and Calculus in one variable',
+                    date: 'Start 2021 - 2022',
+                },
+                {
+                    name: 'Graphic designer for Islam.nu',
+                    desc: 'Created event/course posters, edited videos, managed online courses, and developed social media graphics that aligned with the brands ethos.',
+                    date: 'Start 2016 - Ongoing',
+                },
+                {
+                    name: 'Experienced in various programs',
+                    desc: 'Adobe Photoshop, Adobe Illustrator, Adobe Premier Pro, Adobe After Effects',
+                    date: ' ',
+                },
+            ]
+
+            experienceEntires.forEach((entry) => {
+                db.run(
+                    'INSERT INTO Experience (exname, exdesc, exdate) VALUES (?, ?, ?)',
+                    [entry.name, entry.desc, entry.date],
+                    (error) => {
+                        if (error) {
+                            console.log('ERROR inserting into Experience table: ', error)
+                        } else {
+                            console.log(`Added '${entry.name}' to the Experience table.`)
                         }
                     }
                 )

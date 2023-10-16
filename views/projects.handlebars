@@ -1,61 +1,71 @@
 <div class='about-me-center-container'>
     <div class='about-me-bg'>
         <div class='about-me-title lora'>Projects</div>
+
         {{#if isAdmin}}
-            <div>
-                <a class='btn' href='/projects/new'>New project</a>
+            <div class='project-actions'>
+                <div>
+                    <a class='btn' href='/projects/new'>New project</a>
+                </div>
             </div>
         {{/if}}
 
-        {{#if dbError}}
-            <div class='error'>
-                Sorry, there was a problem with the database:
-                <br />
-                {{theError}}
+        <div class='programming-title'>PROGRAMMING PROJECTS</div>
+        <div class='programming-container'>
+            <div class='project-programming-container'>
+                {{#if dbError}}
+                    <div class='error'>
+                        Sorry, there was a problem with the database:
+                        <br />
+                        {{theError}}
+                    </div>
+                {{else}}
+                    {{#each projects}}
+                        {{#if (eq ptype 'programming')}}
+                            {{#if ../isAdmin}}
+                                <div class='project-actions'>
+                                    <a class='btn' href='/projects/update/{{pid}}'>Modify</a>
+                                    <a class='btn' href='/projects/delete/{{pid}}'>Delete</a>
+                                </div>
+                            {{/if}}
+                            <div class='project-programming-section'>
+                                <div class='project-programming-name'>{{pname}}</div>
+                                <!-- <div class='p-year'>{{pyear}}</div> -->
+                                <div class='project-programming-image'>
+                                    <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
+                                </div>
+                            </div>
+                        {{/if}}
+                    {{/each}}
+                {{/if}}
             </div>
-        {{else}}
-            <div class='programming-title'>PROGRAMMING PROJECTS</div>
+        </div>
 
-            {{#each projects}}
-
-                {{#if (eq ptype 'programming')}}
-                    <div class='project-programming-container'>
-                        <div class='project-programming-section'>
-                            <div class='project-programming-name'>{{pname}}</div>
-                            {{!-- <div class='p-year'>{{pyear}}</div> --}}
-                            <div class='project-programming-image'>
-                                <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
+        <div class='graphic-design-title'>GRAPHIC DESIGN PROJECTS</div>
+        <div class='graphic-design-container'>
+            <div class='graphic-design-section'>
+                {{#each projects}}
+                    {{#if (eq ptype 'graphic-design')}}
+                        {{#if ../isAdmin}}
+                            <div class='project-actions'>
+                                <a class='btn' href='/projects/update/{{pid}}'>Modify</a>
+                                <a class='btn' href='/projects/delete/{{pid}}'>Delete</a>
+                            </div>
+                        {{/if}}
+                        <div class='project-graphic-design-container'>
+                            <div class='project-graphic-design-section'>
+                                <!-- <div class='g-name'>{{pname}}</div> -->
+                                <!-- <div class='g-year'>{{pyear}}</div> -->
+                                <div class='project-graphic-design-image'>
+                                    <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                {{/if}}
-            {{/each}}
-
-            <div class='graphic-design-title'>GRAPHIC DESIGN PROJECTS</div>
-            {{#each projects}}
-                {{#if (eq ptype 'graphic-design')}}
-                    <div class='project-graphic-design-container'>
-                        <div class='project-graphic-design-section'>
-                            {{!-- <div class='g-name'>{{pname}}</div> --}}
-                            {{!-- <div class='g-year'>{{pyear}}</div> --}}
-                            <div class='project-graphic-design-image'>
-                                <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
-                            </div>
-                        </div>
-                    </div>
-                {{/if}}
-
-                {{#if ../isAdmin}}
-                    <div class='project-actions'>
-                        <a class='btn' href='/projects/update/{{pid}}'>Modify</a>
-                        <a class='btn' href='/projects/delete/{{pid}}'>Delete</a>
-                    </div>
-                {{/if}}
-
-            {{/each}}
-        {{/if}}
+                    {{/if}}
+                {{/each}}
+            </div>
+        </div>
     </div>
-
 </div>
 <div class='project-me-graphic'>
     <img src='/img/project-me-graphic.svg' alt='Background graphic for project section' />

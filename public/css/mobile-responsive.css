@@ -83,7 +83,7 @@
 
     .nav-links {
         flex-wrap: wrap;
-        margin: 25px 0 10px 0px;
+        margin: 25px 0 10px 0px !important;
         width: 70%;
         padding: 0 !important;
         align-items: center;
@@ -138,11 +138,22 @@
     }
 
     .container-shared {
-        scale: 80%;
+        margin-top: 40px;
+    }
+
+    .experience-right-container {
+        margin-top: 100px !important;
+        width: 300px !important;
+    }
+
+    .education-left-container {
+        margin-top: 20px !important;
+        width: 300px !important;
     }
 
     .about-me-squares-container {
-        gap: 10px !important;
+        display: block !important;
+        margin-top: 50px !important;
     }
 
     .about-me-short-desc {
@@ -166,17 +177,61 @@
 
     /* projects */
 
-    .project-me-graphic img {
-        position: fixed !important;
-        height: 800px !important;
-        top: 400px !important;
-    }
-
     .programming-title,
     .graphic-design-title {
-        font-weight: 600 !important;
+        font-weight: 400 !important;
         color: white !important;
-        font-size: 1.5125rem !important;
+        font-size: 1.1125rem !important;
+    }
+
+    .programming-title{
+        margin-bottom: 50px !important;
+        margin-top: 30px !important;
+    }
+
+    .graphic-design-title{
+        margin-bottom: 50px !important; 
+        margin-top: 10px !important;
+    }
+
+    .project-programming-container {
+        display: block;
+        width: 70%;
+        margin: 0 !important;
+    }
+
+    .project-programming-section {
+        display: block;
+        justify-content: center;
+        margin: 0 !important;
+    }
+
+    .project-programming-name {
+        width: 100%;
+        height: 80px !important;
+        font-size: 0.9375rem !important;
+    }    
+
+    .graphic-design-section {
+        display: block !important;
+        gap: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .project-graphic-design-image img {
+        width: 250px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .about-me-bg {
+        width: 100% !important;
+    }
+
+    .project-me-graphic img {
+        display: none; /* Hide the background graphic for mobile */
     }
 
     /* Contact */

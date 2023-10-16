@@ -128,4 +128,9 @@
 .proj-box img {
     width: 240px;
     max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.proj-box img:hover {
+    transform: scale(1.05);
 }
