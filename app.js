@@ -6,6 +6,7 @@ const session = require('express-session')
 const connectSqlite3 = require('connect-sqlite3')
 const sqlite3 = require('sqlite3')
 const Handlebars = require('handlebars')
+const fs = require('fs')
 const bcrypt = require('bcryptjs')
 
 // Global Constants & Variables
@@ -16,7 +17,6 @@ const saltRounds = 12
 const storedHashedPassword = '$2a$12$0twOEMc0xE0z/ZYIJXj0QuMbeYw4D1h5cxPeRBd13bTqcclwGEgEq'
 
 // Middleware Configuration
-
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
 app.set('views', './views')
@@ -38,6 +38,33 @@ Handlebars.registerHelper('eq', function (a, b) {
     return a === b
 })
 
+// Register Handlebars partial
+const partialContent = fs.readFileSync('views/partials/menu.handlebars', 'utf8')
+Handlebars.registerPartial('navigation/menu', partialContent)
+
+// Check if the "compiled" directory exists, if not, create it
+if (!fs.existsSync('compiled')) {
+    fs.mkdirSync('compiled')
+}
+
+// Load main layout and the specific page
+var mainLayout = fs.readFileSync('views/layouts/main.handlebars', 'utf8')
+var landingPage = fs.readFileSync('views/landing-page.handlebars', 'utf8')
+
+// Compile them
+var compiledMain = Handlebars.compile(mainLayout)
+var compiledLanding = Handlebars.compile(landingPage)
+
+// Get the HTML for the landing page
+var landingHtml = compiledLanding({
+    /* any data the landing page needs */
+})
+
+// Inject the landing page HTML into the main layout
+var finalHtml = compiledMain({ body: landingHtml })
+
+// Save to a static file
+fs.writeFileSync('compiled/landing-page.html', finalHtml)
 app.get('/', (req, res) => {
     console.log('SESSION: ', req.session)
     const model = {
