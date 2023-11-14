@@ -184,13 +184,13 @@
         font-size: 1.1125rem !important;
     }
 
-    .programming-title{
+    .programming-title {
         margin-bottom: 50px !important;
         margin-top: 30px !important;
     }
 
-    .graphic-design-title{
-        margin-bottom: 50px !important; 
+    .graphic-design-title {
+        margin-bottom: 50px !important;
         margin-top: 10px !important;
     }
 
@@ -210,7 +210,7 @@
         width: 100%;
         height: 80px !important;
         font-size: 0.9375rem !important;
-    }    
+    }
 
     .graphic-design-section {
         display: block !important;
@@ -262,5 +262,47 @@
     }
     .contact-sub-title {
         margin: 20px 0 40px 0 !important;
+    }
+
+    .home__social-icon {
+        margin: 10px;
+        font-size: 1.2rem;
+    }
+
+    .home__social-icon:hover,
+    .home__social-icon:visited {
+    }
+
+    .home__social {
+        display: flex !important;
+        margin-right: 0px !important;
+        margin-top: 20px;
+    }
+
+    .project-view-section {
+        display: block !important;
+    }
+
+    .project-view-nameDesc {
+        display: block;
+        padding-left: 0 !important;
+        padding-top: 80px !important;
+    }
+
+    .project-view-section {
+        display: block;
+    }
+
+    .project-view-nameDesc {
+        display: block;
+        padding-left: 0 !important;
+        padding-top: 80px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-view-section img {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
     }
 }

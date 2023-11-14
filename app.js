@@ -117,6 +117,33 @@ app.get('/projects', (req, res) => {
     })
 })
 
+app.get('/projects/:id', (req, res) => {
+    const projectId = req.params.id
+    db.get('SELECT * FROM projects WHERE pid=?', [projectId], (error, theProject) => {
+        if (error) {
+            console.log('ERROR: ', error)
+            const model = {
+                dbError: true,
+                theError: error,
+                isLoggedIn: req.session.isLoggedIn,
+                name: req.session.name,
+                isAdmin: req.session.isAdmin,
+            }
+            res.render('projectView.handlebars', model)
+        } else {
+            const model = {
+                dbError: false,
+                theError: '',
+                project: theProject,
+                isLoggedIn: req.session.isLoggedIn,
+                name: req.session.name,
+                isAdmin: req.session.isAdmin,
+            }
+            res.render('projectView.handlebars', model)
+        }
+    })
+})
+
 app.get('/projects/new', (req, res) => {
     if (req.session.isLoggedIn && req.session.isAdmin) {
         const model = {
@@ -305,7 +332,7 @@ db.run(
                     id: 1,
                     name: 'Personal CV showcase website',
                     year: 2023,
-                    desc: 'Description',
+                    desc: 'We were assigned to develop a personal CV website, to be hosted locally, utilising only HTML and CSS, with minimal reliance on JavaScript.<br><br>I chose a minimalist design, resembling an A4 sheet, to present my information in a clear and clear manner. The colour palette was restricted to blue, black, and white.<br><br>I implemented a navigational bar to grant easy access to specific sections of my CV, allowing users to explore areas of interest in greater detail. This approach ensured a user-friendly experience while maintaining a professional and sleek appearance.',
                     type: 'programming',
                     url: '/img/proj-g/Cv-website.png',
                 },
@@ -313,39 +340,39 @@ db.run(
                     id: 2,
                     name: 'Database for a sneakerBrand business',
                     year: 2023,
-                    desc: 'Description',
+                    desc: 'We designed a database for a sneaker brand, and this is the logical model of the database.',
                     type: 'programming',
                     url: '/img/proj-g/Logical-model.png',
                 },
                 {
                     id: 3,
-                    name: ' ',
+                    name: 'Poster',
                     year: 0,
-                    desc: 'Description',
+                    desc: 'Poster for a travel agency',
                     type: 'graphic-design',
                     url: '/img/proj-g/Umrah191227.png',
                 },
                 {
                     id: 4,
-                    name: ' ',
+                    name: 'Poster',
                     year: 0,
-                    desc: 'Description',
+                    desc: 'Poster for a lecture event',
                     type: 'graphic-design',
                     url: '/img/proj-g/Jonkoping_230807.png',
                 },
                 {
                     id: 5,
-                    name: ' ',
+                    name: 'Poster',
                     year: 0,
-                    desc: 'Description',
+                    desc: 'Poster for a online course',
                     type: 'graphic-design',
                     url: '/img/proj-g/Arabiska-kurs.png',
                 },
                 {
                     id: 6,
-                    name: ' ',
+                    name: 'Poster',
                     year: 0,
-                    desc: 'Description',
+                    desc: 'Poster for a livestream',
                     type: 'graphic-design',
                     url: '/img/proj-g/Sahih_AlBukhari.png',
                 },

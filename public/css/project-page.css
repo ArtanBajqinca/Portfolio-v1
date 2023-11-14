@@ -19,23 +19,22 @@
 
 .project-programming-name {
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: #fff;
-    font-family: 'Avenir Next', sans-serif;
-    font-size: 0.9375rem;
-    font-weight: 600;
-    letter-spacing: 0.02813rem;
-    border-style: solid;
-    border-radius: 5px;
-    height: 50px;
-    margin-bottom: 25px;
-    width: 450px;
+    color: #9c9c9c;
+    font-family: 'Avenir next', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.3;
+    /* border: 3px solid white;
+    border-radius: 5px; */
+    height: 8%;
+    margin-bottom: 0px;
     text-align: center;
 }
 
 .project-programming-image {
     margin-bottom: 50px;
+    width: 400px;
 }
 
 .programming-title {

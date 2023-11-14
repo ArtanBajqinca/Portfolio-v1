@@ -2,11 +2,11 @@
 
 .about-me-graphic img {
     position: absolute;
-    height: 1500px;
-    left: 50%;
-    transform: translate(-50%, -50%);
     top: 1000px;
+    left: 50%;
     z-index: -1;
+    height: 1500px;
+    transform: translate(-50%, -50%);
 }
 
 .about-me-center-container {
@@ -18,8 +18,8 @@
 
 .about-me-bg {
     display: block;
-    background-color: #373737;
     width: 1200px;
+    background-color: #373737;
     margin-top: 15 0px;
 }
 
@@ -35,11 +35,8 @@
 }
 
 .about-me-short-desc {
-    justify-content: center;
-}
-
-.about-me-short-desc {
     display: flex;
+    justify-content: center;
     width: 800px;
     font-family: 'Avenir Next', sans-serif;
     font-size: 0.8rem;
@@ -50,8 +47,8 @@
 
 .about-me-container {
     display: block;
-    justify-content: center;
     width: 100%;
+    justify-content: center;
 }
 
 .about-me-titles {
@@ -71,9 +68,8 @@
     color: #fff;
     font-family: 'Avenir Next', sans-serif;
     font-size: 1.25rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: 1.40625rem; /* 112.5% */
+    line-height: 1.40625rem;
     letter-spacing: 0.0375rem;
     text-align: left;
     margin-top: 80px;
@@ -108,9 +104,8 @@
     color: #fff;
     font-family: 'Avenir Next', sans-serif;
     font-size: 1.25rem;
-    font-style: normal;
     font-weight: 700;
-    line-height: 1.40625rem; /* 112.5% */
+    line-height: 1.40625rem;
     letter-spacing: 0.0375rem;
     text-align: left;
     margin-top: 80px;
@@ -136,37 +131,28 @@
     margin-top: 20px;
 }
 
+.Edu-title-left,
+.Edu-title-right {
+    display: inline;
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 1.625rem;
+    font-weight: bold;
+    letter-spacing: 0.27625rem;
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
 .Edu-title-left {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Avenir Next', sans-serif;
-    font-size: 1.625rem;
-    font-weight: bold;
-    letter-spacing: 0.27625rem;
-    -webkit-text-stroke: 2px white;
-    color: transparent;
-}
-
-.Edu-title-right {
-    font-family: 'Avenir Next', sans-serif;
-    font-size: 1.625rem;
-    font-weight: bold;
-    letter-spacing: 0.27625rem;
-    -webkit-text-stroke: 2px white;
-    color: transparent;
-}
-
-.Edu-title-left,
-.Edu-title-right {
-    display: inline;
 }
 
 /* about me squares */
 
 .about-me-squares {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: center;
 }
 
@@ -174,22 +160,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 100px;
     align-items: center;
+    gap: 100px;
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
 .container-shared {
-    height: 230px;
     width: 230px;
+    height: 230px;
     border: 4px solid white;
     border-radius: 25px;
 }
 
 .title-shared {
-    text-align: center;
     color: white;
+    text-align: center;
     font-family: 'Avenir Next', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
@@ -198,24 +184,26 @@
 }
 
 .desc-shared {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
     color: #d9d9d9;
     font-family: 'Avenir Next', sans-serif;
     font-size: 1rem;
-    font-style: normal;
     font-weight: 400;
-    display: flex;
-    justify-content: center;
+    margin-top: 20px;
 }
 
-.square-middle-desc {
+.square-middle-desc,
+.square-left-desc ul {
     margin: 0;
+    margin-top: -10px;
 }
+
 .square-right-desc {
     text-align: center;
-}
-
-.square-left-desc ul,
-.square-middle-desc ul li {
-    margin: 0;
+    color: #d9d9d9;
+    font-size: 0.9rem;
+    font-style: italic;
+    width: 80%;
+    margin: 20px auto auto auto;
 }

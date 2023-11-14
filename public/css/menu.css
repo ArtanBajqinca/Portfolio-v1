@@ -28,15 +28,19 @@
 
 .nav-links {
     display: flex;
-    padding-top: 5px;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .btn-link {
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    margin: 20px !important;
+    padding: 0;
+    border: 0;
+    width: 100% !important;
 }
+
 .user-greetings {
     display: flex;
     flex-direction: row;

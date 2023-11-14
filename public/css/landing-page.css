@@ -10,7 +10,7 @@
 .hero-group {
     display: flex;
     align-items: center;
-    margin-left: 170px;
+    margin-left: 2.8%;
 }
 
 .hero-text {
@@ -79,11 +79,11 @@
 
 .rectangle {
     position: relative;
-    bottom: 30px;
-    left: 84px;
+    bottom: 28px;
+    left: 86px;
     background: #373737;
-    width: 8.75rem;
-    height: 1.175rem;
+    width: 8.55rem;
+    height: 1.075rem;
     z-index: -1;
 }
 
@@ -133,4 +133,26 @@
 
 .proj-box img:hover {
     transform: scale(1.05);
+}
+
+.home__social-icon {
+    display: flex;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.home__social-icon:hover,
+.home__social-icon:visited {
+    color: white;
+    text-decoration: none;
+    transform: scale(1.3);
+}
+
+.home__social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+    margin-right: 50px;
 }
