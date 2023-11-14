@@ -212,6 +212,10 @@
         font-size: 0.9375rem !important;
     }
 
+    .project-programming-image {
+        width: 100% !important;
+    }
+
     .graphic-design-section {
         display: block !important;
         gap: 50px;
@@ -304,5 +308,13 @@
     .project-view-section img {
         padding-left: 40px !important;
         padding-right: 40px !important;
+    }
+
+    .project-view-nameDesc {
+        width: 300px !important;
+    }
+
+    .project-view-img {
+        margin-top: 60px !important;
     }
 }
