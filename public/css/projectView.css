@@ -13,9 +13,7 @@
 }
 
 .project-view-section img {
-    max-width: 700px;
-    width: 100%;
-    height: auto;
+    max-height: 700px;
     margin-top: 120px;
 }
 

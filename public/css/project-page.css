@@ -1,14 +1,13 @@
 .programming-container {
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .project-programming-container {
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     margin: 50px;
-    width: 100%;
 }
 
 .project-programming-section {
@@ -51,8 +50,7 @@
 }
 
 .project-programming-image img {
-    max-width: 100%;
-    height: auto;
+    max-width: 400px;
     transition: transform 0.3s ease;
 }
 
