@@ -13,7 +13,7 @@
 .project-programming-section {
     display: block;
     justify-content: center;
-    margin: 0 50px;
+    margin: 0 15px;
 }
 
 .project-programming-name {
@@ -32,25 +32,62 @@
 }
 
 .project-programming-image {
+    margin-bottom: 14px;
+}
+.repo-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.repository-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #484848;
     margin-bottom: 50px;
-    width: 400px;
+    border-radius: 4px;
+    height: 30px;
+}
+
+.github-icon-repo {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.repository-container,
+.repository-container:hover,
+.repository-container:visited,
+.repository-container:active {
+    text-decoration: none;
+}
+
+.repository-container:focus {
+    outline: none;
+}
+
+.repo-title {
+    color: white;
+    font-family: 'Avenir next', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .programming-title {
     display: flex;
     justify-content: center;
-    font-family: 'Avenir Next', sans-serif;
-    font-weight: 700;
-    color: transparent;
+    font-family: 'arcade classic', sans-serif;
+    color: white;
     text-align: center;
     margin: 50px 0 10px 0;
-    font-size: 1.8125rem;
-    letter-spacing: 0.30813rem;
-    -webkit-text-stroke: 2px white;
+    font-size: 1.3rem;
+    letter-spacing: 0.3rem;
 }
 
 .project-programming-image img {
-    max-width: 400px;
+    max-width: 505px;
     transition: transform 0.3s ease;
 }
 
@@ -95,21 +132,67 @@
 .graphic-design-title {
     display: flex;
     justify-content: center;
-    font-family: 'Avenir Next', sans-serif;
-    font-weight: 700;
-    color: transparent;
+    font-family: 'arcade classic', sans-serif;
+    color: white;
     text-align: center;
     margin: 0 0 80px 0;
-    font-size: 1.8125rem;
-    letter-spacing: 0.30813rem;
-    -webkit-text-stroke: 2px white;
+    font-size: 1.3rem;
+    letter-spacing: 0.3rem;
 }
 
 .project-graphic-design-image img {
+    position: relative;
     max-width: 400px;
     transition: transform 0.3s ease;
 }
 
 .project-graphic-design-image img:hover {
     transform: scale(1.05);
+}
+
+.project-programming-design-image img {
+    position: relative;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.project-programming-image:hover img {
+    filter: brightness(40%);
+}
+
+.project-programming-image img:hover {
+    transform: scale(1.05);
+}
+
+.project-programming-image:hover .overlay-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Avenir next', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.project-programming-image,
+.project-graphic-design-image {
+    position: relative;
+    /* Rest of your styles... */
 }

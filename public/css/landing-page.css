@@ -101,10 +101,10 @@
 .Featured-proj-title {
     text-align: center;
     color: #fff;
-    font-family: 'Lora', sans-serif;
-    font-size: 2.37rem;
+    font-family: 'arcade classic', sans-serif;
+    font-size: 1.5rem;
     font-weight: bold;
-    letter-spacing: 0.086rem;
+    letter-spacing: 0.4rem;
     margin-bottom: 50px;
 }
 
@@ -122,11 +122,11 @@
 .proj-box {
     display: flex;
     justify-content: center;
-    margin: 25px;
+    margin: 0px;
 }
 
 .proj-box img {
-    max-height: 400px;
+    max-height: 350px;
     transition: transform 0.3s ease;
 }
 

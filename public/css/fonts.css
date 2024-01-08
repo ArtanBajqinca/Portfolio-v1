@@ -41,6 +41,11 @@
 }
 
 @font-face {
+    font-family: 'Avenir bold';
+    src: url('/fonts/AvenirNextLTPro-Bold.otf') format('truetype');
+}
+
+@font-face {
     font-family: 'AvenirLTStd-Book';
     src: url('/fonts/AvenirLTStd-Book.otf') format('truetype');
 }
@@ -48,4 +53,9 @@
 @font-face {
     font-family: 'AvenirLTStd-Medium';
     src: url('/fonts/AvenirLTStd-Medium.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Arcade Classic';
+    src: url('/fonts/ArcadeClassic-ov2x.ttf') format('truetype');
 }

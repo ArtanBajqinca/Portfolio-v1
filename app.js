@@ -320,7 +320,7 @@ app.listen(port, () => {
 
 // Create 'projects' table
 db.run(
-    'CREATE TABLE projects (pid INTEGER PRIMARY KEY, pname TEXT NOT NULL, pyear INTEGER NOT NULL, pdesc TEXT NOT NULL, ptype TEXT NOT NULL, pimgURL TEXT NOT NULL)',
+    'CREATE TABLE projects (pid INTEGER PRIMARY KEY, pname TEXT NOT NULL, pyear INTEGER NOT NULL, pdesc TEXT NOT NULL, ptype TEXT NOT NULL, pimgURL TEXT NOT NULL, prepoURL TEXT)',
     (error) => {
         if (error) {
             console.log('ERROR: ', error)
@@ -334,15 +334,17 @@ db.run(
                     year: 2023,
                     desc: 'We were assigned to develop a personal CV website, to be hosted locally, utilising only HTML and CSS, with minimal reliance on JavaScript.<br><br>I chose a minimalist design, resembling an A4 sheet, to present my information in a clear and clear manner. The colour palette was restricted to blue, black, and white.<br><br>I implemented a navigational bar to grant easy access to specific sections of my CV, allowing users to explore areas of interest in greater detail. This approach ensured a user-friendly experience while maintaining a professional and sleek appearance.',
                     type: 'programming',
-                    url: '/img/proj-g/Cv-website.png',
+                    url: '/img/proj-g/cv_showcase.png',
+                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
                 },
                 {
                     id: 2,
-                    name: 'Database for a sneakerBrand business',
+                    name: 'Connect Four Mobile Game',
                     year: 2023,
-                    desc: 'We designed a database for a sneaker brand, and this is the logical model of the database.',
+                    desc: 'As part of our Android course, our team developed a unique mobile version of the classic game Connect Four, themed around coins. Our goal was to create an engaging and user-friendly experience. <br><br> To achieve this, we utilized Figma, an advanced design tool, to craft a modern and simplistic interface that is intuitive for players of all ages. The game features captivating sound effects, adding to its appeal. <br><br> The development process involved Kotlin, a versatile and efficient programming language ideal for Android app development. We also integrated Jetpack Compose to streamline the user interface creation, ensuring smooth and responsive gameplay. <br><br> This project not only honed my technical skills in app development but also enhanced my teamwork and creative problem-solving abilities. It stands as a testament to my dedication and capability in crafting enjoyable and functional mobile applications.',
                     type: 'programming',
-                    url: '/img/proj-g/Logical-model.png',
+                    url: '/img/proj-g/coinnect.png',
+                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
                 },
                 {
                     id: 3,
@@ -350,7 +352,8 @@ db.run(
                     year: 0,
                     desc: 'Poster for a travel agency',
                     type: 'graphic-design',
-                    url: '/img/proj-g/Umrah191227.png',
+                    url: '/img/proj-g/umrah191227.png',
+                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
                 },
                 {
                     id: 4,
@@ -358,7 +361,8 @@ db.run(
                     year: 0,
                     desc: 'Poster for a lecture event',
                     type: 'graphic-design',
-                    url: '/img/proj-g/Jonkoping_230807.png',
+                    url: '/img/proj-g/jonkoping_230807.png',
+                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
                 },
                 {
                     id: 5,
@@ -366,22 +370,50 @@ db.run(
                     year: 0,
                     desc: 'Poster for a online course',
                     type: 'graphic-design',
-                    url: '/img/proj-g/Arabiska-kurs.png',
+                    url: '/img/proj-g/arabiska_kurs.png',
+                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
                 },
                 {
                     id: 6,
                     name: 'Poster',
                     year: 0,
-                    desc: 'Poster for a livestream',
+                    desc: 'Poster for a charity fundraiser ',
                     type: 'graphic-design',
-                    url: '/img/proj-g/Sahih_AlBukhari.png',
+                    url: '/img/proj-g/ramadan_kampanjen_2023.png',
+                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
+                },
+                {
+                    id: 8,
+                    name: 'Database for a sneakerBrand business',
+                    year: 2023,
+                    desc: 'In my "Databases" course, we focused on learning how to build databases and use SQL, a language for managing data in a database. Our main project involved creating two types of plans for a database: a basic outline (conceptual model) and a more detailed plan (logical model). <br><br> From these plans, we built the actual database using SQL commands. We also added data to the database tables using more SQL commands. The project challenged us to write different types of SQL queries, from easy to more complex ones, to get specific information out of our database. <br><br> This project really helped me understand how databases are set up and how to use SQL to work with data, which are important skills in handling databases and analyzing data.',
+                    type: 'programming',
+                    url: '/img/proj-g/database.png',
+                    repoURL: null,
+                },
+                {
+                    id: 7,
+                    name: 'Profession Portfolio',
+                    year: 2023,
+                    desc: 'In my web development course, I created a "Professional Portfolio" website to show off my programming skills. This site is a personal display where people can learn about me, see my past work, and find how to contact me.<br><br> I built the site using HTML, CSS, Node.js, Express.js, and Handlebars. It has a modern, dark design that looks professional. The website includes my projects, some with links to the code, showing my coding skills.<br><br> This project is part of my class and shows my ability to mix technical know-how with creative design, making a portfolio that effectively showcases my professional abilities.',
+                    type: 'programming',
+                    url: '/img/proj-g/portfolio.png',
+                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
                 },
             ]
 
             projectsEntries.forEach((oneProject) => {
                 db.run(
-                    'INSERT INTO projects (pid, pname, pyear, pdesc, ptype, pimgURL) VALUES (?, ?, ?, ?, ?, ?)',
-                    [oneProject.id, oneProject.name, oneProject.year, oneProject.desc, oneProject.type, oneProject.url],
+                    'INSERT INTO projects (pid, pname, pyear, pdesc, ptype, pimgURL, prepoURL) VALUES (?, ?, ?, ?, ?, ?, ?)',
+                    [
+                        oneProject.id,
+                        oneProject.name,
+                        oneProject.year,
+                        oneProject.desc,
+                        oneProject.type,
+                        oneProject.url,
+                        oneProject.repoURL,
+                    ],
                     (error) => {
                         if (error) {
                             console.log('ERROR: ', error)

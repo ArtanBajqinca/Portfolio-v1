@@ -1,3 +1,7 @@
+
+    
+    <link rel='stylesheet' href='https://unicons.iconscout.com/release/v4.0.0/css/line.css' />
+
 <div class='about-me-center-container'>
     <div class='about-me-bg'>
         <div class='about-me-title lora'>Projects</div>
@@ -31,18 +35,33 @@
                             <div class='project-programming-section'>
                                 <div class='project-programming-image'>
                                     <a href='/projects/{{pid}}'>
+                                    <div class="overlay-text">{{pname}}</div>
                                         <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
                                     </a>
                                 </div>
+                                
+                                {{#if prepoURL}}
+                                    <div class="repository-section">
+                                        <a href="{{prepoURL}}" class="repository-container">
+                                            <div class="repo-button">
+                                                <img class="github-icon-repo" src="/img/github_logo.png" alt="github logo">
+                                                <div class="repo-title">Repository</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {{/if}}
+                                
                             </div>
                         {{/if}}
                     {{/each}}
                 {{/if}}
+            
             </div>
         </div>
 
         <div class='graphic-design-title'>GRAPHIC DESIGN PROJECTS</div>
         <div class='graphic-design-container'>
+
             <div class='graphic-design-section'>
                 {{#each projects}}
                     {{#if (eq ptype 'graphic-design')}}
@@ -57,6 +76,7 @@
                                 <div class='project-graphic-design-image'>
                                     <a href='/projects/{{pid}}'>
                                         <img src='{{pimgURL}}' alt='Image for project {{pname}}' />
+                                        <div class="overlay-text">{{pdesc}}</div>
                                     </a>
                                 </div>
                             </div>

@@ -46,20 +46,34 @@
     }
     #homeGraphic {
         max-width: 300px;
-        margin: 0 20px 60px 0;
+        margin: 20px 20px 40px 0;
     }
 
     .Featured-proj {
         margin: 100px 0 75px 0;
     }
 
-    .proj-box {
+    .proj-container {
+        flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
+    }
+
+    .proj-box {
+        height: 100% !important;
         margin: 25px 0;
     }
 
+    .proj-box img {
+        width: 75% !important;
+
+        transition: transform 0.3s ease;
+    }
+
     .Featured-proj-title {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+        width: 50%;
+        margin-bottom: 20px;
     }
 
     /* Navbar */
@@ -84,7 +98,7 @@
     .nav-links {
         flex-wrap: wrap;
         margin: 25px 0 10px 0px !important;
-        width: 70%;
+        width: 100% !important;
         padding: 0 !important;
         align-items: center;
         justify-content: center;
@@ -93,7 +107,7 @@
 
     .btn-link {
         display: flex !important;
-        width: 100px !important;
+        width: 90px !important;
         margin: 0 !important;
         border: 0 !important;
         background-color: #373737 !important;
@@ -142,12 +156,12 @@
     }
 
     .experience-right-container {
-        margin-top: 100px !important;
+        margin-top: 60px !important;
         width: 300px !important;
     }
 
     .education-left-container {
-        margin-top: 20px !important;
+        margin-top: 60px !important;
         width: 300px !important;
     }
 
@@ -158,6 +172,7 @@
 
     .about-me-short-desc {
         width: 80% !important;
+        margin-bottom: -60px;
     }
 
     /* login */
@@ -180,29 +195,33 @@
     .programming-title,
     .graphic-design-title {
         font-weight: 400 !important;
+        margin: 0 5%;
         color: white !important;
         font-size: 1.1125rem !important;
     }
 
     .programming-title {
-        margin-bottom: 50px !important;
         margin-top: 30px !important;
     }
 
     .graphic-design-title {
         margin-bottom: 50px !important;
-        margin-top: 10px !important;
     }
 
     .project-programming-container {
         display: block;
-        width: 70%;
-        margin: 0 !important;
+    }
+
+    .graphic-design-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90% !important;
     }
 
     .project-programming-section {
         display: block;
-        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
         margin: 0 !important;
     }
 
@@ -218,6 +237,8 @@
 
     .graphic-design-section {
         display: block !important;
+        margin-left: auto;
+        margin-right: auto;
         gap: 50px;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
@@ -225,9 +246,36 @@
         margin-bottom: 100px;
     }
 
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: 'Avenir next', sans-serif;
+        font-weight: 600;
+        font-size: 1rem !important;
+        line-height: 25px;
+        text-decoration: none;
+        text-align: center;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+    }
+
     .project-graphic-design-image img {
-        width: 250px !important;
+        width: 100% !important;
         margin-bottom: 30px !important;
+    }
+
+    .project-programming-image img {
+        width: 100% !important;
+        margin-bottom: 0px !important;
     }
 
     .about-me-bg {
@@ -306,8 +354,8 @@
     }
 
     .project-view-section img {
-        padding-left: 40px !important;
-        padding-right: 40px !important;
+        max-width: 800px;
+        margin: 50px 0 0 0  !important;
     }
 
     .project-view-nameDesc {
@@ -315,6 +363,14 @@
     }
 
     .project-view-img {
+        display: block;
+        width: 100% !important;
         margin-top: 60px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-view-img {
+        max-height: 700px !important;
     }
 }

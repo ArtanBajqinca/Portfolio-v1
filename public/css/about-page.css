@@ -5,7 +5,7 @@
     top: 1000px;
     left: 50%;
     z-index: -1;
-    height: 1500px;
+    height: 1700px; 
     transform: translate(-50%, -50%);
 }
 
@@ -72,7 +72,7 @@
     line-height: 1.40625rem;
     letter-spacing: 0.0375rem;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .education-description {
@@ -108,7 +108,7 @@
     line-height: 1.40625rem;
     letter-spacing: 0.0375rem;
     text-align: left;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .experience-description {
@@ -134,12 +134,11 @@
 .Edu-title-left,
 .Edu-title-right {
     display: inline;
-    font-family: 'Avenir Next', sans-serif;
+    font-family: 'arcade classic', sans-serif;
     font-size: 1.625rem;
     font-weight: bold;
     letter-spacing: 0.27625rem;
-    -webkit-text-stroke: 2px white;
-    color: transparent;
+    color: white;
 }
 
 .Edu-title-left {

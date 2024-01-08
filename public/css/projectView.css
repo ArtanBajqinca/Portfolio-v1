@@ -1,19 +1,7 @@
-.about-me-center-container {
-    display: flex;
-    justify-content: center;
-    color: white;
-    margin-top: 150px;
-}
-
-.about-me-bg {
-    display: block;
-    width: 100%;
-    background-color: #373737;
-    margin-top: 15 0px;
-}
-
 .project-view-section img {
-    max-height: 700px;
+    max-width: 50%;
+    
+    margin: 50px;
     margin-top: 120px;
 }
 
@@ -22,46 +10,50 @@
     justify-content: center;
     align-items: start;
     margin-bottom: 100px;
+    width: 100%;
 }
 
 .project-view-container {
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    
 }
 
 .project-view-nameDesc {
     display: block;
-    padding-left: 80px;
-    padding-top: 200px;
-    width: 400px;
+    padding-top: 120px;
+    width: 500px;
     margin-bottom: 100px;
+    margin-right: 50px;
+    
 }
 
 .project-view-nameDesc h1 {
     color: #fff;
-    font-family: OCR A Extended;
-    font-size: 1.375rem;
+    font-family: 'OCRAEXT', sans-serif;
+    font-size: 1.175rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem; /* 109.091% */
     letter-spacing: 0.04125rem;
     margin-bottom: 80px;
-    margin-top: 30px;
 }
 
 .project-view-nameDesc h2,
 h3 {
     color: #fff;
-    font-family: 'Avenir Next', sans-serif;
+    font-family: 'Avenir bold', sans-serif;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.165rem;
 }
 
 .project-view-nameDesc p {
     color: #fff;
-    font-family: 'Avenir Next', sans-serif;
+    font-family: 'AvenirLTStd-Book', sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
