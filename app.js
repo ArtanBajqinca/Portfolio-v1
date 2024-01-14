@@ -335,7 +335,7 @@ db.run(
                     desc: 'We were assigned to develop a personal CV website, to be hosted locally, utilising only HTML and CSS, with minimal reliance on JavaScript.<br><br>I chose a minimalist design, resembling an A4 sheet, to present my information in a clear and clear manner. The colour palette was restricted to blue, black, and white.<br><br>I implemented a navigational bar to grant easy access to specific sections of my CV, allowing users to explore areas of interest in greater detail. This approach ensured a user-friendly experience while maintaining a professional and sleek appearance.',
                     type: 'programming',
                     url: '/img/proj-g/cv_showcase.png',
-                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
+                    repoURL: 'https://github.com/ArtanBajqinca/Personal-cv-website',
                 },
                 {
                     id: 2,
@@ -344,7 +344,7 @@ db.run(
                     desc: 'As part of our Android course, our team developed a unique mobile version of the classic game Connect Four, themed around coins. Our goal was to create an engaging and user-friendly experience. <br><br> To achieve this, we utilized Figma, an advanced design tool, to craft a modern and simplistic interface that is intuitive for players of all ages. The game features captivating sound effects, adding to its appeal. <br><br> The development process involved Kotlin, a versatile and efficient programming language ideal for Android app development. We also integrated Jetpack Compose to streamline the user interface creation, ensuring smooth and responsive gameplay. <br><br> This project not only honed my technical skills in app development but also enhanced my teamwork and creative problem-solving abilities. It stands as a testament to my dedication and capability in crafting enjoyable and functional mobile applications.',
                     type: 'programming',
                     url: '/img/proj-g/coinnect.png',
-                    repoURL: 'https://github.com/ArtanBajqinca/ArtanBajqinca-webdev-portfolio.git',
+                    repoURL: 'https://github.com/ArtanBajqinca/Connect-four-game',
                 },
                 {
                     id: 3,
