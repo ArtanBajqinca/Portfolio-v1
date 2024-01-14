@@ -9,6 +9,8 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
+    margin-top: 10px;
+    gap: 20px;
 }
 
 .num-mail,
@@ -26,6 +28,18 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.linkedin-icon {
+    height: 30px;
+}
+
+.github-icon {
+    height: 35px;
+}
+
+.mail-icon {
+    height: 27px;
 }
 
 .contact-sub-title {

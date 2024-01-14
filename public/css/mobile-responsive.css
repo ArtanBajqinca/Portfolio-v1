@@ -293,7 +293,8 @@
     }
 
     .contact-container {
-        margin: 0 !important;
+        margin-top: 60px;
+        gap: 0px;
     }
 
     .linkedin-git {
