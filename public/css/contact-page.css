@@ -28,6 +28,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+}
+
+.num:hover,
+.mail:hover,
+.linkedin:hover,
+.git:hover {
+    text-decoration: none;
 }
 
 .linkedin-icon {
@@ -35,11 +43,11 @@
 }
 
 .github-icon {
-    height: 35px;
+    height: 30px;
 }
 
 .mail-icon {
-    height: 27px;
+    height: 30px;
 }
 
 .contact-sub-title {
@@ -66,5 +74,4 @@
 .linkedin-username,
 .git-username {
     color: white !important;
-    text-decoration: underline;
 }
