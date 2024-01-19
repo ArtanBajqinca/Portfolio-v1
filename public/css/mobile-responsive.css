@@ -171,8 +171,7 @@
     }
 
     .about-me-short-desc {
-        width: 80% !important;
-        margin-bottom: -60px;
+        width: 100% !important;
     }
 
     /* login */
@@ -282,6 +281,14 @@
         width: 100% !important;
     }
 
+    .about-me-titles {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 8%;
+        margin-top: 0 !important;
+    }
+
     .project-me-graphic img {
         display: none; /* Hide the background graphic for mobile */
     }
@@ -356,7 +363,7 @@
 
     .project-view-section img {
         max-width: 800px;
-        margin: 50px 0 0 0  !important;
+        margin: 50px 0 0 0 !important;
     }
 
     .project-view-nameDesc {
@@ -373,5 +380,14 @@
 
     .project-view-img {
         max-height: 700px !important;
+    }
+
+    .about-me-desc-bg {
+        height: 100%;
+        background-color: #303030;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 30px !important;
+        margin: 0 25px 0px 20px;
     }
 }

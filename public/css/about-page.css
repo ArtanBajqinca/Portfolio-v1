@@ -5,7 +5,7 @@
     top: 1000px;
     left: 50%;
     z-index: -1;
-    height: 1700px; 
+    height: 1700px;
     transform: translate(-50%, -50%);
 }
 
@@ -37,12 +37,19 @@
 .about-me-short-desc {
     display: flex;
     justify-content: center;
-    width: 800px;
+    width: 860px;
     font-family: 'Avenir Next', sans-serif;
     font-size: 0.8rem;
     line-height: 1.35rem;
     letter-spacing: 0.03rem;
-    margin-top: 45px;
+}
+
+.about-me-desc-bg {
+    height: 100%;
+    background-color: #303030;
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: 40px;
 }
 
 .about-me-container {

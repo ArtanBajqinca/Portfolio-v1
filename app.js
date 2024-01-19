@@ -493,7 +493,7 @@ db.run(
             const experienceEntires = [
                 {
                     name: 'Course completed at University',
-                    desc: 'C++, Databases, Data Structures and Algorithms, Object Oriented  Programming and also math courses such as Discrete Mathematic, Linear Algebra and Calculus in one variable',
+                    desc: 'Android development, C++, Databases, Data Structures and Algorithms, Object Oriented  Programming and also math courses such as Discrete Mathematic, Linear Algebra and Calculus in one variable',
                     date: 'Start 2021 - 2022',
                 },
                 {
