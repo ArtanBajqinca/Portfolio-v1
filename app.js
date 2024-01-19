@@ -9,7 +9,7 @@ const Handlebars = require('handlebars')
 const bcrypt = require('bcryptjs')
 
 // Global Constants & Variables
-const port = 80
+const port = 3000
 const app = express()
 const db = new sqlite3.Database('database-ab.db')
 const saltRounds = 12
