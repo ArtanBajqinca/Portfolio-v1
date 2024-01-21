@@ -53,7 +53,7 @@
 }
 
 .github-icon-repo {
-    width: 20px;
+    width: 18px;
     margin-right: 10px;
 }
 
@@ -70,9 +70,10 @@
 
 .repo-title {
     color: white;
-    font-family: 'Avenir next', sans-serif;
-    font-weight: 500;
+    font-family: 'AvenirLTStd-Medium';
+    margin-top: 2px;
     text-decoration: none;
+    letter-spacing: 1;
 }
 
 .programming-title {

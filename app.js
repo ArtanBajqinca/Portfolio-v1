@@ -450,7 +450,7 @@ db.run(
                 {
                     name: 'Basic Science year',
                     desc: "I undertook the Basic Science Year at Jönköping's Technical College, strengthening my foundation in mathematics, physics, and chemistry, priming me for advanced engineering studies.",
-                    date: '2020 - 2021',
+                    date: '2021 - 2022',
                 },
                 {
                     name: 'High School degree in carpentry',
@@ -494,7 +494,7 @@ db.run(
                 {
                     name: 'Course completed at University',
                     desc: 'Android development, C++, Databases, Data Structures and Algorithms, Object Oriented  Programming and also math courses such as Discrete Mathematic, Linear Algebra and Calculus in one variable',
-                    date: 'Start 2021 - 2022',
+                    date: 'Start 2021 - Ongoing',
                 },
                 {
                     name: 'Graphic designer for Islam.nu',

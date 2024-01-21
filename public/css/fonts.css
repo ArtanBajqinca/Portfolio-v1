@@ -30,11 +30,18 @@
 }
 
 @font-face {
+    font-family: 'OCRABold';
+    src: url('/fonts/OCRABold.ttf') format('truetype');
+    font-weight: 700; /* regular */
+}
+
+@font-face {
     font-family: 'OCRAEXT';
     src: url('/fonts/OCRAEXT-Italic.ttf') format('truetype');
     font-weight: 400; /* regular */
     font-style: italic;
 }
+
 @font-face {
     font-family: 'moskau-grotesk-extrabold';
     src: url('/fonts/moskau-grotesk-extrabold.otf') format('truetype');

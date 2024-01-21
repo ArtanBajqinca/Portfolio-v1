@@ -300,8 +300,8 @@
     }
 
     .contact-container {
-        margin-top: 60px;
         gap: 0px;
+        margin-bottom: 30px;
     }
 
     .linkedin-git {
@@ -314,9 +314,6 @@
         scale: 80%;
     }
 
-    .contact-background-rectangle {
-        height: 400px !important;
-    }
     .linkedin-git  {
         margin-top: 0px;
     }
